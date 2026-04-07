@@ -5,12 +5,12 @@ const Navbar = () => {
   const [showWechat, setShowWechat] = useState(false);
 
   const navItems = [
-    { label: "首页", href: "#top" },
-    { label: "功能亮点", href: "#features" },
-    { label: "充值定价", href: "#pricing" },
-    { label: "使用教程", href: "http://tkgongju.top:8000/docs", external: true },
-    { label: "联系客服", action: () => setShowWechat(true) },
-  ];
+  { label: "首页", href: "#top" },
+  { label: "功能亮点", href: "#features" },
+  { label: "充值定价", href: "#pricing" },
+  { label: "使用教程", href: "/tutorial", external: false },
+  { label: "联系客服", action: () => setShowWechat(true) },
+];
 
   return (
     <>
