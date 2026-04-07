@@ -35,17 +35,23 @@ const HeroSection = () => {
         <p className="text-sm md:text-base text-foreground/60 max-w-2xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
           全面，高效，极致！助力每一位TK人在跨境取得更加优异的成绩。愿各位仰望星空，脚踏实地。
         </p>
+        
+        {/* 按钮组区：已修复 */}
         <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          {/* 下载按钮：接入腾讯云直链 */}
           <a
-            href="#"
+            href="https://tianqitk-1379115483.cos.ap-guangzhou.myqcloud.com/%E5%A4%A9%E5%90%AFTK_Setup_v1.2.0.exe"
+            download="天启TK_Setup_v1.2.0.exe"
             className="rounded-full bg-primary px-8 py-3.5 text-base font-bold text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-[0_0_30px_hsl(68_100%_50%/0.4)]"
           >
             下载 Windows 客户端
           </a>
-          <button
+          
+          {/* 联系客服按钮：点击打开微信弹窗 */}
+          <button 
             onClick={() => setShowWechat(true)}
             className="rounded-full border-2 border-foreground px-8 py-3.5 text-base font-bold text-foreground hover:bg-foreground/10 transition-colors"
-          >
+          >      
             联系客服
           </button>
         </div>
