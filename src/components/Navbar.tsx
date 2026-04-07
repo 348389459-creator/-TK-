@@ -5,11 +5,13 @@ const Navbar = () => {
   const [showWechat, setShowWechat] = useState(false);
 
   const navItems = [
-  { label: "首页", href: "#top" },
-  { label: "功能亮点", href: "#features" },
-  { label: "充值定价", href: "#pricing" },
-  { label: "使用教程", href: "/tutorial", external: false },
-  { label: "联系客服", action: () => setShowWechat(true) },
+  { label: "首页", href: "#top", external: false, action: undefined },
+  { label: "功能亮点", href: "#features", external: false, action: undefined },
+  { label: "充值定价", href: "#pricing", external: false, action: undefined },
+  // 👇 核心改动：指向咱们刚才建好的高级播放页
+  { label: "使用教程", href: "/tutorial", external: false, action: undefined },
+  // 👇 保持联系客服弹窗功能不变
+  { label: "联系客服", href: undefined, external: false, action: () => setShowWechat(true) },
 ];
 
   return (
