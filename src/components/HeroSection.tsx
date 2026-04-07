@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { CloudCog, Headset, X } from "lucide-react";
+// 🟢 修改1：这里多引入了一个 PlayCircle (播放图标)
+import { CloudCog, Headset, X, PlayCircle } from "lucide-react";
+// 🟢 修改2：引入 React Router 的 Link 组件，用来丝滑跳转页面
+import { Link } from "react-router-dom"; 
 import heroBg from "@/assets/hero-bg.jpg";
 
 const trustItems = [
@@ -46,6 +49,15 @@ const HeroSection = () => {
           >
             下载 Windows 客户端
           </a>
+
+          {/* 🟢 修改3：新增的使用教程按钮 (带播放小图标) */}
+          <Link 
+            to="/tutorial"
+            className="flex items-center gap-2 rounded-full border-2 border-primary/80 px-8 py-3.5 text-base font-bold text-primary hover:bg-primary/10 transition-colors"
+          >
+            <PlayCircle className="w-5 h-5" />
+            使用教程
+          </Link>
           
           {/* 联系客服按钮：点击打开微信弹窗 */}
           <button 
